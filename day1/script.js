@@ -65,15 +65,15 @@ function init() {
     bufferLoader = new BufferLoader(
         context,
         [
-          'sounds/bass.wav',
-          'sounds/kick.wav',
-          'sounds/clap.wav',
-          'sounds/snap.wav',
-          'sounds/hi-hat.wav',
-          'sounds/snare.wav',
-          'sounds/tom.wav',
-          'sounds/rim.wav',
-          'sounds/damn.mp3'
+          'sounds/bass.wav',    //Q
+          'sounds/kick.wav',    //W
+          'sounds/clap.wav',    //E
+          'sounds/snap.wav',    //A
+          'sounds/hi-hat.wav',  //S
+          'sounds/snare.wav',   //D
+          'sounds/tom.wav',     //Z
+          'sounds/rim.wav',     //X
+          'sounds/damn.mp3'     //C
         ],
         setKeys
     );
@@ -86,18 +86,17 @@ function setKeys(bufferList) {
     window.addEventListener('keydown', function(e){
 
         var source = context.createBufferSource();
-
         source.connect(context.destination);
 
         //key codes for [Q,W,E,A,S,D,Z,X,C]
-        var codes = [81,87,69,65,83,68,90,88,67];
+        const codes = [81,87,69,65,83,68,90,88,67];
 
+        //match key to sound and play it
         codes.forEach( function(code, index) {
             if (e.keyCode == code) {
                 source.buffer = bufferList[index];
+                source.start(0);
             }
         });
-
-        source.start(0);
     });
 }
