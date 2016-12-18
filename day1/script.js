@@ -98,5 +98,18 @@ function setKeys(bufferList) {
                 source.start(0);
             }
         });
+
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        key.classList.add('key-pressed');
     });
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+}
+
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') {
+        return;
+    }
+    this.classList.remove('key-pressed');
 }

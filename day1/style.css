@@ -2,29 +2,47 @@ body {
     font-family: sans-serif;
     color: #3D3D3D;
     font-size: 8pt;
+    background: #d53369;
+    background: -webkit-linear-gradient(to left, #d53369, #cbad6d);
+    background: linear-gradient(to left, #d53369, #cbad6d);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #drum-pad {
+    width: 252px;
+    padding: 20px;
     margin: 0 auto;
     margin-top: 100px;
     overflow: hidden;
-    width: 252px;
+    background-color: #404040;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #000000;
 }
 
 .key {
+    width: 70px;
+    height: 55px;
+    float: left;
+    margin: 5px;
     padding: 15px 0 0 0;
-    margin:5px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .05s;
     background-color: #E3E3E3;
     border: 2px solid #3D3D3D;
     border-radius: 10px;
-    width: 70px;
-    height: 55px;
-    text-align: center;
-    float: left;
-    box-shadow: 3px 3px 2px #888888;
+    box-shadow: 3px 3px 2px #000000;
 }
 
 .letter {
     font-size: 24pt;
     font-weight: bold;
+}
+
+.key-pressed {
+    -ms-transform: translate(2px, 2px); /* IE 9 */
+    -webkit-transform: translate(2px, 2px); /* Safari */
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
