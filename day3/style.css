@@ -1,0 +1,41 @@
+:root {
+    --blur: 0px;
+    --contrast: 100%;
+    --hue: 0deg;
+    --brightness: 100%;
+    --invert: 0%;
+    --saturation: 100%;
+}
+
+body {
+    margin: 5em 5vw 5em 5vw;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 30pt;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+img {
+    width: 40vw;
+    float:left;
+    filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast)) hue-rotate(var(--hue)) invert(var(--invert)) saturate(var(--saturation));
+}
+
+#controls {
+    width: 40vw;
+    float:right;
+    display: flex;
+    flex-direction: column;
+}
