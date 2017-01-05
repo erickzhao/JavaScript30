@@ -8,18 +8,15 @@
 }
 
 body {
-    margin: 5em 5vw 5em 5vw;
+    margin: 5em 10vw 5em 10vw;
     font-family: sans-serif;
+    background: #5EDBA3;
+    color: white;
 }
 
 h1 {
     font-size: 30pt;
     margin-bottom: 0;
-}
-
-h2 {
-    font-size: 12pt;
-    font-weight: normal;
 }
 
 #header {
@@ -34,7 +31,8 @@ img {
 }
 
 #controls {
-    width: 40vw;
+    width: 20vw;
+    margin-right: 10vw;
     float:right;
     display: flex;
     flex-direction: column;

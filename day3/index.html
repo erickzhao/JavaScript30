@@ -8,8 +8,7 @@
 
 <body>
     <div id="header">
-        <h1>Modifying CSS variables with JavaScript</h1>
-        <h2>(for use with Firefox 49+, Chrome 49+, and Safari 9.1+)</h2>
+        <h1>Image Editor</h1>
     </div>
 
     <input type="file" onchange="loadImage()"/>
@@ -17,14 +16,13 @@
     <img id="image" src=""/>
 
     <div id="controls">
+        <h2>Controls</h2>
         <label for="blur">Blur</label><input type="range" name="blur" min="0" max="30" value="0" data-units="px"/>
         <label for="brightness">Brightness</label><input type="range" name="brightness" min="0" max="200" value="100" data-units="%"/>
         <label for="contrast">Contrast</label><input type="range" name="contrast" min="0" max="200" value="100" data-units="%"/>
         <label for="Hue">Hue</label><input type="range" name="hue" min="0" max="360" value="0" data-units="deg"/>
         <label for="Invert">Invert</label><input type="range" name="invert" min="0" max="100" value="0" data-units="%"/>
         <label for="saturation">Saturation</label><input type="range" name="saturation" min="0" max="200" value="100" data-units="%"/>
-
-        <button type="button" name="reset">Reset</button>
     </div>
 
     <script src="script.js"></script>
